@@ -5,6 +5,7 @@ import '../providers/water_provider.dart';
 
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import '../widgets/weather_card.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -363,49 +364,8 @@ SizedBox(
               const SizedBox(height: 28),
 
               // WEATHER INFORMATION PLACEHOLDER
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(18),
-                decoration: BoxDecoration(
-                  color: AppColors.white,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: const Row(
-                  children: [
-                    Icon(
-                      Icons.cloud_outlined,
-                      size: 38,
-                      color: AppColors.primary,
-                    ),
-                    SizedBox(width: 14),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment:
-                            CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Weather Today',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                              color: AppColors.darkText,
-                            ),
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            'Weather information will appear here.',
-                            style: TextStyle(
-                              color: AppColors.grey,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
+              const WeatherCard(),
+              
               const SizedBox(height: 20),
 
               // MOTIVATION CARD
