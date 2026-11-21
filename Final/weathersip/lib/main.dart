@@ -6,6 +6,7 @@ import 'firebase_options.dart';
 import 'providers/water_provider.dart';
 import 'screens/auth_gate.dart';
 import 'theme/app_theme.dart';
+import 'providers/weather_provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,8 +16,11 @@ Future<void> main() async {
   );
 
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => WaterProvider(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => WaterProvider()),
+        ChangeNotifierProvider(create: (_) => WeatherProvider()..load()),
+      ],
       child: const WeatherSipApp(),
     ),
   );
