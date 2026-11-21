@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "198505139593",
+    "project_id": "weathersip",
+    "storage_bucket": "weathersip.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198505139593:android:999a1bf610b38259912558",
+        "android_client_info": {
+          "package_name": "com.example.weathersip"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_hdvj9IB_FZRCEuSlKXollJfc1no7810"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
